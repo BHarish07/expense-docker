@@ -7,8 +7,8 @@ RUN useradd expense && \
 WORKDIR /app
 COPY package.json . 
 COPY *.json .
-RUN npm install && \
-    apt update && \
-    apt install -y default-mysql-client
+RUN npm install
+RUN apt update
+RUN apt install -y default-mysql-client
 CMD [ "node", "index.json" ]
 
