@@ -10,5 +10,5 @@ COPY *.json .
 RUN npm install
 RUN apt update
 RUN apt install -y default-mysql-client
-CMD [ "node", "index.json" ]
+CMD [ "node", "index.js" ]
 
