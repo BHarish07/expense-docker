@@ -7,8 +7,8 @@ RUN chown expense:expense -R /app
 WORKDIR /app
 COPY package.json . 
 COPY *.js .
-RUN npm install \
-    apt update \
+RUN npm install && \
+    apt update && \
     apt install -y default-mysql-client
 CMD [ "node", "index.json" ]
 
