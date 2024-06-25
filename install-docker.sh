@@ -9,3 +9,13 @@ systemctl start docker
 systemctl enable docker
 usermod -aG docker ec2-user
 newgrp docker
+
+#For ubuntu
+
+##!/bin/bash
+# apt-get  update -y
+# apt-get install -y docker.io
+# systemctl enable docker 
+# systemctl start docker
+# usermod -aG docker ubuntu
+# newgrp docker
