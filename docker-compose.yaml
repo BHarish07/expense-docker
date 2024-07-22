@@ -1,4 +1,4 @@
-#version: "3.8"
+##version: "3.8"
 # name: "expense"
 # volumes:
 #   mysql:
@@ -70,15 +70,16 @@
 
 name: expense
 networks:
-  default:
-    name: expense
+  expense: 
+   driver: bridge
 volumes: 
-  mysql:
+  mysql
 services:
   mysql: 
     image: mysql:v1.0.0
     container_name: mysql
     volumes: 
+     
     - source: mysql
       target: /var/lib/mysql
       type: volume
